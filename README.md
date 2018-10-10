@@ -1,4 +1,4 @@
-# my-vuepro1
+# my-vuepro1 #a project @vue/cli 3.0
 
 ## Project setup
 ```
