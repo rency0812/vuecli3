@@ -19,6 +19,7 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import moment from 'moment'
+import axios from 'axios'
 
 export default {
   name: 'home',
@@ -27,7 +28,15 @@ export default {
       nTime: null
     }
   },
+  methods: {
+    getData () {
+      axios.get('/api/login', { params: { id: 1 } }).then(res => {
+        console.log(res)
+      })
+    }
+  },
   mounted () {
+    this.getData()
     setInterval(() => {
       this.nTime = moment().format('YYYY MM DD HH:mm:ss')
       this.$store.state.token = this.nTime
