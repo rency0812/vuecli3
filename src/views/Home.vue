@@ -82,7 +82,7 @@ export default {
         })
         return
       }
-      if (!Number.isInteger(this.ruleForm2.age)){
+      if (!Number.isInteger(this.ruleForm2.age)) {
         this.$message('请输入纯数字')
         return
       }
@@ -92,6 +92,7 @@ export default {
             message: res.data.msg,
             type: 'success'
           })
+          this.getData()
         } else {
           this.$message({
             message: '添加失败',
