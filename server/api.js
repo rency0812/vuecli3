@@ -12,14 +12,34 @@ const pool = mysql.createPool({
 })
 
 module.exports = {
-  getValue (req, res, next) {
-    var id = req.query.id
+  addValue (req, res, next) {
+    let name = req.query.name
+    let age = req.query.age
     pool.getConnection((err, connection) => {
+      if (err) console.log(err)
+      var sql = sqlMap.addValue
+      connection.query(sql, [name, age], (err, result) => {
+        if (err) {
+          result.code = 1
+          res.json(err)
+          return
+        }
+        result.code = 0
+        result.msg = '成功'
+        res.json(result)
+        connection.release()
+      })
+    })
+  },
+  getValue (req, res, next) {
+    // var id = req.query.id
+    pool.getConnection((err, connection) => {
+      if (err) { console.log(err) }
       var sql = sqlMap.getValue
-      connection.query(sql, [id], (err, result) => {
-          res.json(result)
-          console.log(err)
-          connection.release()
+      connection.query(sql, (err, result) => {
+        res.json(result)
+        connection.release()
+        if (err) console.log(err)
       })
     })
   },
@@ -28,11 +48,12 @@ module.exports = {
     var id = req.body.id
     var name = req.body.name
     pool.getConnection((err, connection) => {
+      if (err) console.log(err)
       var sql = sqlMap.setValue
       connection.query(sql, [name, id], (err, result) => {
-          res.json(result)
-          console.log(err)
-          connection.release()
+        res.json(result)
+        console.log(err)
+        connection.release()
       })
     })
   }
