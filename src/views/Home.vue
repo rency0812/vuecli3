@@ -20,7 +20,7 @@
 </style>
 
 <template>
-  <div class="home">
+  <div ref="home" class="home">
     <h2>{{nTime}}</h2>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App 3.0"/>
@@ -59,13 +59,18 @@ import axios from 'axios'
 export default {
   name: 'home',
   data () {
+    let fn = () => {
+      return 123
+    }
+    this.g_table = '456' + fn()
     return {
       nTime: null,
       data: null,
       ruleForm2: {
         name: '',
         age: ''
-      }
+      },
+      $home: this.$refs.home
     }
   },
   methods: {
@@ -108,9 +113,11 @@ export default {
     }
   },
   mounted () {
+    let $css = document.querySelector('.form-box').getAttribute('class')
+    console.log(this.$refs.home, $css)
     this.getData()
     setInterval(() => {
-      this.nTime = moment().format('YYYY MM DD HH:mm:ss')
+      this.nTime = moment().format('YYYY/MM/DD HH:mm:ss')
       this.$store.state.token = this.nTime
     }, 1000)
   },
