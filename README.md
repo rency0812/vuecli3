@@ -33,6 +33,7 @@ npm run lint
 npm run test:unit
 ```
 // vue.config.js
+```
 module.exports = {
     // 选项...
     // 当使用基于 HTML5 history.pushState 的路由时；
@@ -73,3 +74,4 @@ module.exports = {
         // }
     }
 }
+```
