@@ -1,24 +1,3 @@
-<style lang="scss" scoped>
-  .home{
-    position: relative;
-    h2{
-      font-size: 50px;
-      color: dodgerblue;
-    }
-    .tag-box{
-      position: absolute;
-      top: 20px;
-      left: 30px;
-      border: 1px solid #eeeeee;
-      background: #fff;
-    }
-    .form-box{
-      left: auto;
-      right: 30px;
-    }
-  }
-</style>
-
 <template>
   <div ref="home" class="home">
     <h2>{{nTime}}</h2>
@@ -55,6 +34,7 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import moment from 'moment'
 import axios from 'axios'
+import bus from '../eventBus.js'
 
 export default {
   name: 'home',
@@ -110,6 +90,7 @@ export default {
       Object.keys(this.ruleForm2).forEach(k => {
         this.ruleForm2[k] = ''
       })
+      bus.$emit('get-num', 1)
     }
   },
   mounted () {
@@ -120,9 +101,33 @@ export default {
       this.nTime = moment().format('YYYY/MM/DD HH:mm:ss')
       this.$store.state.token = this.nTime
     }, 1000)
+    bus.$on('get-num', data => {
+      console.log(data)
+    })
   },
   components: {
     HelloWorld
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .home{
+    position: relative;
+    h2{
+      font-size: 50px;
+      color: dodgerblue;
+    }
+    .tag-box{
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      border: 1px solid #eeeeee;
+      background: #fff;
+    }
+    .form-box{
+      left: auto;
+      right: 30px;
+    }
+  }
+</style>

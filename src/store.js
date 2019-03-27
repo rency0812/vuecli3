@@ -8,9 +8,7 @@ export default new Vuex.Store({
     token: null
   },
   mutations: {
-
   },
   actions: {
-
   }
 })

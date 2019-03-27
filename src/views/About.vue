@@ -9,15 +9,19 @@
     <h2>{{aTime}}</h2>
     <p>这是使用vuecli3.0构建</p>
     <p>作者：rency</p>
+    <p>{{num}}</p>
     <p>...........</p>
   </div>
 </template>
 <script>
+// import bus from '../eventBus.js'
+
 export default {
   name: 'about',
   data () {
     return {
-      aTime: null
+      aTime: null,
+      num: 0
     }
   },
   mounted () {
@@ -30,3 +34,7 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+
+</style>

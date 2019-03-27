@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 @click="sendMsg">{{ msg }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -32,10 +32,18 @@
 </template>
 
 <script>
+import bus from '../eventBus.js'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: {
+    sendMsg () {
+      let i = 0
+      bus.$emit('get-num', i)
+    }
   }
 }
 </script>

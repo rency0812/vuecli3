@@ -1,23 +1,3 @@
-<style lang="scss" scoped>
-  .rency-header{
-    height: 70px;
-    background: #ccc;
-    text-align: center;
-  }
-  .main-content{
-    text-align: center;
-  }
-  .rency-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background: #000;
-    text-align: center;
-    color: #fff;
-  }
-</style>
-
 <template>
   <div class="rency-component">
     <slot name="rency-header" class="rency-header">
@@ -45,3 +25,23 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .rency-header{
+    height: 70px;
+    background: #ccc;
+    text-align: center;
+  }
+  .main-content{
+    text-align: center;
+  }
+  .rency-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #000;
+    text-align: center;
+    color: #fff;
+  }
+</style>
