@@ -4,8 +4,8 @@ npm install -g @vue/cli
 # OR
 ```
 yarn global add @vue/cli
-创建一个项目：
-vue create my-project
+创建一个项目：vue create my-project
+```
 # OR
 vue ui
 //直接拉取仓库项目
