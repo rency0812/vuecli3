@@ -2,8 +2,8 @@
 # 我们安装vuecli3.0 npm 或者 yarn都是可以的网上慢的小伙子可以用yarn
 npm install -g @vue/cli
 # OR
-yarn global add @vue/cli
 ```
+yarn global add @vue/cli
 创建一个项目：
 vue create my-project
 # OR
