@@ -3,6 +3,7 @@
 npm install -g @vue/cli
 # OR
 yarn global add @vue/cli
+br
 创建一个项目：
 vue create my-project
 # OR
