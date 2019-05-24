@@ -30,7 +30,8 @@ module.exports = {
     // eslint-loader 是否在保存的时候检查
     lintOnSave: true,
     // webpack配置
-    // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
+    # // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
+    ```
     chainWebpack: config => {
         config
             .entry('index')
@@ -61,6 +62,7 @@ module.exports = {
                 });
         }
     },
+    ```
     configureWebpack: config => {
         if (isProduction) {
             // 用cdn方式引入
@@ -91,7 +93,8 @@ module.exports = {
     },
     // 生产环境是否生成 sourceMap 文件
     productionSourceMap: false,
-    // css相关配置
+   # // css相关配置
+   ```
     css: {
         // 是否使用css分离插件 ExtractTextPlugin
         extract: true,
