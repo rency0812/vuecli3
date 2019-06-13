@@ -1,13 +1,17 @@
 # my-vuepro1 #a project @vue/cli 3.0
-# 我们安装vuecli3.0 npm 或者 yarn都是可以的网上慢的小伙子可以用yarn
+```
+我们安装vuecli3.0 npm 或者 yarn都是可以的
+npm可以使用淘宝镜像（npm install -g cnpm --registry=https://registry.npm.taobao.org）
+上网慢的小伙子可以用yarn
 npm install -g @vue/cli
-# OR
+```
+# OR yarn
 ```
 yarn global add @vue/cli
 创建一个项目：vue create my-project
-```
 # OR
-vue ui
+vue ui 可视化界面
+```
 //直接拉取仓库项目
 ## Project setup
 ```
