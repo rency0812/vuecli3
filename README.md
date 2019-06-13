@@ -5,7 +5,7 @@ npm可以使用淘宝镜像（npm install -g cnpm --registry=https://registry.np
 上网慢的小伙子可以用yarn
 npm install -g @vue/cli
 ```
-## OR yarn
+### OR yarn
 ```
 yarn global add @vue/cli
 创建一个项目：vue create my-project
@@ -13,7 +13,7 @@ yarn global add @vue/cli
 vue ui 可视化界面
 ```
 //直接拉取仓库项目
-## Project setup
+### Project setup
 ```
 npm install
 ```
