@@ -1,3 +1,5 @@
+### vscode_set_sync
+token 5d71ac96481eeb98d605fc436a141eed59a499ab
 ### my-vuepro1 #a project @vue/cli 3.0
 ```
 我们安装vuecli3.0 npm 或者 yarn都是可以的
