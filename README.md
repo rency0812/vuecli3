@@ -6,10 +6,10 @@ token  41aa9de126c6f0955e6275c3fb93727b5be377a1
 npm可以使用淘宝镜像（npm install -g cnpm --registry=https://registry.npm.taobao.org）
 上网慢的小伙子可以用yarn
 npm install -g @vue/cli
+yarn global add @vue/cli
 ```
 ### OR yarn
 ```
-yarn global add @vue/cli
 创建一个项目：vue create my-project
 # OR
 vue ui 可视化界面
