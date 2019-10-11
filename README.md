@@ -2,13 +2,14 @@
 token  41aa9de126c6f0955e6275c3fb93727b5be377a1
 ### my-vuepro1 #a project @vue/cli 3.0
 ```
-我们安装vuecli3.0 npm 或者 yarn都是可以的
-npm可以使用淘宝镜像（npm install -g cnpm --registry=https://registry.npm.taobao.org）
+我们安装vuecli3.0
+npm 或者 yarn都是可以的
+npm也可以使用淘宝镜像（npm install -g cnpm --registry=https://registry.npm.taobao.org）
 上网慢的小伙子可以用yarn
 npm install -g @vue/cli
 yarn global add @vue/cli
 ```
-### OR yarn
+### init project
 ```
 创建一个项目：vue create my-project
 # OR
