@@ -5,6 +5,9 @@ import store from './store'
 import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import rencyUI from './rency'
+import temp from './temp'
+
+Vue.use(temp)
 
 Vue.config.productionTip = false
 
